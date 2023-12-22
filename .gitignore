@@ -1,13 +1,13 @@
 typings
 **/app/**/*.js
 **/app/**/*.map
-node_modules
-jspm_packages
-bower_components
+**/node_modules
+**/jspm_packages
+**/bower_components
 
-.vs
+**/.vs
 **/*.sou
 **/*.user
-bin
-obj
-packages
+**/bin
+**/obj
+**/packages
