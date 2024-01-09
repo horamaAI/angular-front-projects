@@ -19,6 +19,7 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
+    console.log("redirect to id:", id)
     if (id) {
       this.getProduct(id);
     }
@@ -26,7 +27,10 @@ export class ProductDetailComponent implements OnInit {
 
   getProduct(id: number): void {
     this.productService.getProduct(id).subscribe({
-      next: product => this.product = product,
+      next: product => {
+        console.log("fetch content: ", product);
+        this.product = product;
+      },
       error: err => this.errorMessage = err
     });
   }
